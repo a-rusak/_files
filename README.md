@@ -5,7 +5,7 @@
     1. [`webpack1.config.js`](/build/webpack1.config.js) - React SPA;
     1. [`webpack1.config.js`](/build/webpack2.config.js) - v.2, nunjucks, lazy load, chunkhash, svg-sprite.
 
-1. `/CSS` - BEM with namespaces[1].
+1. `/CSS` - BEM with namespaces<sup>[1]</sup>.
     1. [`figure-list.less`](/CSS/figure-list.less);
     1. [`grid.less`](/CSS/grid.less);
     1. [`main-nav.less`](/CSS/main-nav.less).
@@ -18,7 +18,7 @@
 
 1. `/templates`
     1. [`Nunjucks`](/templates/Nunjucks) - templates used for build `HTML`;
-    1. [`React`](/templates/React) - use Stateless Functional Components[2] as templates to build `HTML` with Static Site Generator Plugin.
+    1. [`React`](/templates/React) - use Stateless Functional Components<sup>[2]</sup> as templates to build `HTML` with Static Site Generator Plugin.
 
 1. [`/React`](/React) - SPA prototype, API mocked with `Express` app.
 
@@ -27,6 +27,6 @@
     1. [`register.js`](/AngularJS/register.js) - Register wizard page
 
 
-[1] [More Transparent UI Code with Namespaces](https://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/)
+[1]: https://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/
 
-[2] [React Stateless Functional Components: Nine Wins You Might Have Overlooked](https://hackernoon.com/react-stateless-functional-components-nine-wins-you-might-have-overlooked-997b0d933dbc)
+[2]: https://hackernoon.com/react-stateless-functional-components-nine-wins-you-might-have-overlooked-997b0d933dbc
