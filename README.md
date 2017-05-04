@@ -18,7 +18,7 @@
 
 1. `/templates`
     1. [`Nunjucks`](/templates/Nunjucks) - templates used for build `HTML`;
-    1. [`React`](/templates/React) - use Stateless Functional Components<sup>[2]</sup> as templates to build `HTML` with Static Site Generator Plugin.
+    1. [`React`](/templates/React) - use Stateless Functional Components<sup>[2]</sup> as templates to build `HTML` with Static Site Generator Webpack Plugin[3].
 
 1. [`/React`](/React) - SPA prototype, API mocked with `Express` app.
 
@@ -30,3 +30,5 @@
 [1]: https://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/
 
 [2]: https://hackernoon.com/react-stateless-functional-components-nine-wins-you-might-have-overlooked-997b0d933dbc
+
+[3]: https://github.com/markdalgleish/static-site-generator-webpack-plugin
