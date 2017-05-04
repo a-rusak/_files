@@ -1,0 +1,65 @@
+@import '../../styles/variables';
+@import '../../styles/colors';
+@import '../../styles/mixins';
+
+@s-stuff: c-admission-stuff__professor;
+@s-license: c-admission-license__item;
+
+.c-figure-list {
+  //background-color: fade(@black, 5%);
+
+  .@{s-stuff} &,
+  .@{s-license} & {
+    align-items: center;
+    text-align: center;
+  }
+
+  &__figure {
+    .bg-cover();
+
+    .a11y--no-images & {
+      display: none;
+    }
+
+    .@{s-stuff} & {
+      width:            percentage(1/2);
+      padding-bottom:   percentage(1/2);
+      border-radius:    percentage(1/2);
+    }
+    .@{s-license} & {
+      width:            percentage(4/5);
+      padding-bottom:   percentage(1/1);
+      background-size: contain;
+    }
+  }
+  &__text {
+    max-width: 100%;
+
+    .c-admission-license__list & {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  &__title {
+
+    .@{s-stuff} &,
+    .@{s-license} & {
+      .t-sans();
+      font-weight: @font-weight-regular;
+      font-size: @size-em-xl;
+      color: @brand-blue;
+      margin-bottom: @size-em-xxs;
+    }
+  }
+  &__subtitle {
+
+    .@{s-stuff} &,
+    .@{s-license} & {
+      font-weight: @font-weight-regular;
+      color: @brand-gray;
+      font-style: italic;
+      font-size: @size-em-s;
+    }
+  }
+}

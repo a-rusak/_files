@@ -1,0 +1,61 @@
+{% from "src/components/card/cards.njk" import cardIcon as card %}
+
+{% set cardData = [{
+  href:  "11",
+  title: "День открытых дверей",
+  text:  "19 марта приглашаем вас на день открытых дверей",
+  color: "red",
+  icon:  "ui-83"
+}, {
+  href:  "22",
+  title: "Конкурсы и олимпиады",
+  text:  "Олимпиада по экономике и финансам «Азимут экономического роста»",
+  color: "blue",
+  icon:  "sports-11"
+}, {
+  href:  "33",
+  title: "Подготовка к ЕГЭ",
+  text:  "Подготовительные курсы в СПбУТУиЭ",
+  color: "green",
+  icon:  "finance-35"
+}] %}
+
+
+<section class="c-main-promo">
+  <div class="l-container">
+    <div class="l-grid">
+      <div class="l-grid__flex l-grid__flex--row c-main-promo__str">
+        <section class="l-grid__flex l-grid__element c-main-promo__str-left">
+          <div class="l-grid__content">
+
+            {% include "src/pages/home/slider/slider.njk" %}
+            
+          </div>
+        </section>
+        <section class="l-grid__flex l-grid__flex--col c-main-promo__str-right">
+          <div class="l-grid__flex l-grid__element c-main-promo__str-right-item">
+            <article class="l-grid__flex l-grid__content">
+
+              {{ card(cardData[0]) }}
+
+            </article>
+          </div>
+          <div class="l-grid__flex l-grid__element c-main-promo__str-right-item">
+            <article class="l-grid__flex l-grid__content">
+
+              {{ card(cardData[1]) }}
+
+            </article>
+          </div>
+          <div class="l-grid__flex l-grid__element c-main-promo__str-right-item">
+            <article class="l-grid__flex l-grid__content">
+
+              {{ card(cardData[2]) }}
+
+            </article>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</section>

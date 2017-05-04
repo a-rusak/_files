@@ -1,0 +1,209 @@
+{% from "src/components/symbol/symbol.njk" import symbol %}
+
+{% macro cardIcon(data) %}
+
+{#
+  @param {String} href
+  @param {String} title
+  @param {HTML}   text
+  @param {String} color
+  @param {String} icon
+#}
+
+<a class="c-card c-card--is-icon c-card--accent-{{ data.color }} c-card--full-width c-card--full-height" href="{{ data.href }}">
+  <div class="l-grid__flex l-grid__element c-card__icon-wrapper">
+    <div class="l-grid__content">
+      <span class="c-card__icon"><img class="c-icon" src="../../icons/{{ data.icon }}.svg"></span>
+    </div>
+  </div>
+  <div class="l-grid__flex l-grid__element c-card__text-wrapper">
+    <div class="l-grid__content">
+      <h3 class="c-card__title">{{ data.title }}</h3>
+      <div class="c-card__text">
+        {{ data.text | safe }}
+      </div>
+    </div>
+  </div>
+</a>
+
+{% endmacro %}
+
+{# ===================================== #}
+
+{% macro cardPhoto(data) %}
+
+{#
+  @param {Inerger} href
+  @param {String}  photo
+  @param {String}  title
+  @param {HTML}    text
+  @param {Array}   tags
+  @param {Array}   links
+#}
+
+{% if data.links %}
+  {% set image_prefix = "admission-links_" %}
+{% else %}
+  {% set image_prefix = "main-news_" %} 
+{% endif %}
+
+<a class="c-card c-card--is-photo {% if data.cover %}c-card--is-cover{% endif %} {% if data.links %}c-card--is-links{% endif %} c-card--full-width" href="{{ data.href }}">
+  <div class="l-grid__flex l-grid__flex--col c-card__wrapper">
+    <div class="l-grid__element c-card__photo-wrapper" 
+         {% if data.photo %}
+         style="background-image: url('/files/{{ image_prefix }}{{ data.photo }}.jpg')"
+         data-adaptive-background="" data-ab-css-background=""
+         {% endif %}></div>
+
+    {% if data.links == null %}
+    <div class="l-grid__flex l-grid__flex--col l-grid__element c-card__text-wrapper">
+
+      {% if data.date %}
+      <p class="c-card__date">{{ data.date }}</p>
+      {% endif %}
+
+      <h4 class="c-card__title">{{ data.title }}</h4>
+
+      {% if data.text %}
+      <div class="c-card__text">
+        {{ data.text | safe }}
+      </div>
+      {% endif %}
+
+      {% if data.tags %}
+      <div class="c-card__tags">
+        {% for tag in data.tags %}
+          <object><a href="{{ loop.index }}">#{{ tag }}</a></object>
+        {% endfor %}
+      </div>
+      
+      {% endif %}
+    </div>
+    {% endif %}
+
+    {% if data.links %}
+    <div class="c-card__links-wrapper">
+      <h4 class="c-card__title">{{ data.title }}</h4>
+      <ul class="c-card__links">
+        {% for link in data.links %}
+          <li><object><a href="{{ loop.index }}">{{ link }}</a></object></li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+
+  </div>
+</a>
+
+{% endmacro %}
+
+{# ===================================== #}
+
+{% macro cardLink(data) %}
+
+{#
+  @param {Inerger} href
+  @param {String}  title
+  @param {String}  bg
+#}
+
+<a href="{{ data.href }}" class="c-card c-card--link c-card--full-width c-card--bg-{{ data.bg }}">
+  <div class="l-grid__element">
+    <h4 class="l-grid__content c-card__title">{{ data.title | safe }}</h4>
+  </div>
+</a>
+
+{% endmacro %}
+
+{# ===================================== #}
+
+{% macro cardPerson(data) %}
+
+{#
+  @param {Inerger} id
+  @param {String}  name
+  @param {String}  position
+  @param {String}  degree
+  @param {String}  email
+  @param {String}  location
+  @param {String}  hour
+  @param {HTML}    text
+  // @param {String}  type: [ list | view ]
+#}
+
+<article class="c-card c-card--person">
+
+  <div class="l-grid__flex c-card__wrapper">
+    <section class="l-grid__element c-card__photo-wrapper">
+      <a href="http://www.spbume.ru/ru/viewperson/{{ data.id }}/"
+         class="c-card__photo"
+         style="background-image: url('http://www.spbume.ru/images/person/small/p{{ data.id }}.jpg')"></a>
+    </section>
+    <section class="l-grid__element c-card__text-wrapper">
+    
+      <h3 class="c-card__position">{{ data.position }}</h3>
+      <h2 class="c-card__title"><a href="http://www.y1s.ru/ru/viewperson/{{ data.id }}/">{{ data.name }}</a></h2>
+      <hr>
+
+      <ul class="c-contacts">
+        {% if data.email %}<li>
+          <a href="mailto:{{ data.email }}">{{ symbol("mail-01", "c-icon") }}{{ data.email }}</a>
+        </li>{% endif %}
+        {% if data.phone %}<li>
+          {{ symbol("phone-15", "c-icon") }}{{ data.phone }}
+        </li>{% endif %}
+        {% if data.location %}<li>
+          {{ symbol("ui-74", "c-icon") }}{{ data.location }}
+        </li>{% endif %}
+      </ul>
+
+      {#<h3 class="c-card__title">Деканат</h3>
+      <hr>
+      <ul class="c-contacts">
+        {% if data.email %}<li>{{ symbol("mail-02", "c-icon") }}{{ data.email }}</li>{% endif %}
+        {% if data.phone %}<li>{{ symbol("phone-15", "c-icon") }}{{ data.phone }}</li>{% endif %}
+        {% if data.location %}<li>{{ symbol("ui-74", "c-icon") }}{{ data.location }}</li>{% endif %}
+      </ul>#}
+
+      {% if data.text %}
+      <div class="c-card__text">
+        {{ data.text | safe }}
+      </div>
+      {% endif %}
+
+    </section>
+  </div>
+  
+</article>
+
+{% endmacro %}
+
+{# ===================================== #}
+
+{% macro cardPersonCompact(data) %}
+
+{#
+  @param {Inerger} id
+  @param {String}  name
+  @param {String}  position
+  @param {String}  degree
+#}
+
+<a class="c-card c-card--person c-card--person-compact" href="http://www.y1s.ru/ru/viewperson/{{ data.id }}/">
+  <div class="l-grid__flex c-card__wrapper">
+    <section class="l-grid__element c-card__photo-wrapper">
+      <div class="c-card__photo"
+           style="background-image: url('http://www.y1s.ru/images/person/small/p{{ data.id }}.jpg')"></div>
+    </section>
+    <section class="l-grid__element c-card__text-wrapper">
+    
+      <h3 class="c-card__title"><span href="http://www.y1s.ru/ru/viewperson/{{ data.id }}/">{{ data.name }}</span></h3>
+      <hr>
+      {% if data.position %}<p class="c-card__details">{{ data.position }}</p>{% endif %}
+      {% if data.degree %}<p class="c-card__details">{{ data.degree }}</p>{% endif %}
+
+    </section>
+  </div>
+</a>
+
+{% endmacro %}

@@ -1,0 +1,107 @@
+@import '../../styles/variables';
+@import '../../styles/colors';
+@import '../../styles/mixins';
+@import '../../styles/responsive';
+
+.c-main-nav {
+  //padding: 0 @size/2;
+  margin-bottom: -@size-em-s;
+
+  &__container {
+    z-index: 2;
+  }
+  
+  &__str {
+    @media @Laptop-L {
+      font-size: ~"calc(0.38rem + 0.8vw)";
+    }
+    @media @Laptop {
+      flex-direction: column-reverse;
+      font-size: 1.7vw;
+    }
+    @media @Tablet, @Phone-L, @Phone-S {
+      flex-direction: column-reverse;
+    }
+
+    &-left {
+    }
+    &-right {
+      margin-left: auto;
+      padding-left: 0;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    
+    @media @Laptop {
+      justify-content: space-between;
+    }
+    @media @Tablet, @Phone-L, @Phone-S {
+      flex-wrap: wrap;
+      justify-content: center;
+      //justify-content: flex-start;
+    }
+  }
+
+  &__root {
+    &-item {
+      position: relative;
+      margin-right: @size-em-xxl;
+
+      &:last-child {
+        margin-right: 0;
+      }
+      @media @Tablet, @Phone-L, @Phone-S {
+        margin-left: @size-em-xxl;
+      }
+    }
+    &-link {
+      .nav-root-link-mixin(main-nav);
+      .t-bold-caps();
+      padding-bottom: @size-em;
+      opacity: .8;
+      white-space: nowrap;
+
+      @media @Tablet, @Phone-L, @Phone-S {
+        padding-bottom: @size-em-xxs;
+        margin-bottom: @size-em-xs;
+      }
+
+      .c-main-nav__list:hover .c-main-nav__root-item:not(:hover) & {
+        opacity: .5;
+      }
+    }
+  }
+
+  &__menu {
+    .nav-menu-mixin(main-nav);
+    min-width: @size-em * 20;
+    width: 100%;
+    top: 100%;
+    font-size: @size-em-s;
+    font-weight: @font-weight-regular;
+
+    .c-main-nav__root-item:last-child & {
+      right: 0;
+    }
+    
+    @media @Tablet, @Phone-L, @Phone-S {
+      display: none;
+      transition: none;
+      transform: none;
+    }
+
+
+    &-item {
+      margin: @size-em-xs 0;
+    }
+    &-link {
+      color: @black;
+    }
+
+  }
+}
