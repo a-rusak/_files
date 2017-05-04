@@ -1,30 +1,30 @@
 # Файлы с примерами кода из разных проектов
 1. `/build` - автоматизация сборки статики.
-    1. [`Gruntfile.js`](/build/Gruntfile.js) - nunjucks, svgstore;
-    1. [`gulpfile.js`](/build/gulpfile.js) - AngularJS SPA, environments, templatecache, cachbusting;
-    1. [`webpack1.config.js`](/build/webpack1.config.js) - React SPA;
-    1. [`webpack1.config.js`](/build/webpack2.config.js) - v.2, nunjucks, lazy load, chunkhash, svg-sprite.
+    * [`Gruntfile.js`](/build/Gruntfile.js) - nunjucks, svgstore;
+    * [`gulpfile.js`](/build/gulpfile.js) - AngularJS SPA, environments, templatecache, cachbusting;
+    * [`webpack1.config.js`](/build/webpack1.config.js) - React SPA;
+    * [`webpack1.config.js`](/build/webpack2.config.js) - v.2, nunjucks, lazy load, chunkhash, svg-sprite.
 
 1. `/CSS` - BEM with namespaces<sup>[1]</sup>.
-    1. [`figure-list.less`](/CSS/figure-list.less);
-    1. [`grid.less`](/CSS/grid.less);
-    1. [`main-nav.less`](/CSS/main-nav.less).
+    * [`figure-list.less`](/CSS/figure-list.less);
+    * [`grid.less`](/CSS/grid.less);
+    * [`main-nav.less`](/CSS/main-nav.less).
 
 1. `/ES2015` - Modern JavaScript.
-    1. [`index.js`](/ES2015/index.js);
-    1. [`a11y.js`](/ES2015/a11y.js) - toggle accessibility mode: toggle contrast scheme, control text size, turn on/off photos;
-    1. [`calculator.js`](/ES2015/calculator.js) - simple form for calculate points;
-    1. [`lightbox.js`](/ES2015/lightbox.js) - photogallery with lazy load.
+    * [`index.js`](/ES2015/index.js);
+    * [`a11y.js`](/ES2015/a11y.js) - toggle accessibility mode: toggle contrast scheme, control text size, turn on/off photos;
+    * [`calculator.js`](/ES2015/calculator.js) - simple form for calculate points;
+    * [`lightbox.js`](/ES2015/lightbox.js) - photogallery with lazy load.
 
 1. `/templates`
-    1. [`Nunjucks`](/templates/Nunjucks) - templates used for build `HTML`;
-    1. [`React`](/templates/React) - use Stateless Functional Components<sup>[2]</sup> as templates to build `HTML` with Static Site Generator Webpack Plugin[3].
+    * [`Nunjucks`](/templates/Nunjucks) - templates used for build `HTML`;
+    * [`React`](/templates/React) - use Stateless Functional Components<sup>[2]</sup> as templates to build `HTML` with Static Site Generator Webpack Plugin[3].
 
 1. [`/React`](/React) - SPA prototype, API mocked with `Express` app.
 
 1. `/AngularJS`
-    1. [`company-name.js`](/AngularJS/company-name.js) - custom control for edit company name right before doing the payment
-    1. [`register.js`](/AngularJS/register.js) - Register wizard page
+    * [`company-name.js`](/AngularJS/company-name.js) - custom control for edit company name right before doing the payment
+    * [`register.js`](/AngularJS/register.js) - Register wizard page
 
 
 [1]: https://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/
