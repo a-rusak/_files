@@ -135,14 +135,14 @@
 
   <div class="l-grid__flex c-card__wrapper">
     <section class="l-grid__element c-card__photo-wrapper">
-      <a href="http://www.spbume.ru/ru/viewperson/{{ data.id }}/"
+      <a href="/viewperson/{{ data.id }}/"
          class="c-card__photo"
-         style="background-image: url('http://www.spbume.ru/images/person/small/p{{ data.id }}.jpg')"></a>
+         style="background-image: url('/images/person/small/p{{ data.id }}.jpg')"></a>
     </section>
     <section class="l-grid__element c-card__text-wrapper">
     
       <h3 class="c-card__position">{{ data.position }}</h3>
-      <h2 class="c-card__title"><a href="http://www.y1s.ru/ru/viewperson/{{ data.id }}/">{{ data.name }}</a></h2>
+      <h2 class="c-card__title"><a href="/viewperson/{{ data.id }}/">{{ data.name }}</a></h2>
       <hr>
 
       <ul class="c-contacts">
@@ -189,15 +189,15 @@
   @param {String}  degree
 #}
 
-<a class="c-card c-card--person c-card--person-compact" href="http://www.y1s.ru/ru/viewperson/{{ data.id }}/">
+<a class="c-card c-card--person c-card--person-compact" href="/viewperson/{{ data.id }}/">
   <div class="l-grid__flex c-card__wrapper">
     <section class="l-grid__element c-card__photo-wrapper">
       <div class="c-card__photo"
-           style="background-image: url('http://www.y1s.ru/images/person/small/p{{ data.id }}.jpg')"></div>
+           style="background-image: url('/images/person/small/p{{ data.id }}.jpg')"></div>
     </section>
     <section class="l-grid__element c-card__text-wrapper">
     
-      <h3 class="c-card__title"><span href="http://www.y1s.ru/ru/viewperson/{{ data.id }}/">{{ data.name }}</span></h3>
+      <h3 class="c-card__title"><span href="/viewperson/{{ data.id }}/">{{ data.name }}</span></h3>
       <hr>
       {% if data.position %}<p class="c-card__details">{{ data.position }}</p>{% endif %}
       {% if data.degree %}<p class="c-card__details">{{ data.degree }}</p>{% endif %}

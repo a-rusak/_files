@@ -12,7 +12,7 @@ const Slider = () => (
         <div
           {...classes('slide', '', ['swiper-slide', 'swiper-lazy'])}
           key={index}
-          data-background={`http://new.smtu.ru/images/admission/slider/${item.src}.jpg`}>
+          data-background={`/images/admission/slider/${item.src}.jpg`}>
           <div className="l-container">
             <Slide data={item}/>
           </div>
