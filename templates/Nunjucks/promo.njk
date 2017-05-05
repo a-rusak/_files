@@ -33,27 +33,15 @@
           </div>
         </section>
         <section class="l-grid__flex l-grid__flex--col c-main-promo__str-right">
+
+          {% for data in cardData %}
           <div class="l-grid__flex l-grid__element c-main-promo__str-right-item">
             <article class="l-grid__flex l-grid__content">
-
-              {{ card(cardData[0]) }}
-
+              {{ card(data) }}
             </article>
           </div>
-          <div class="l-grid__flex l-grid__element c-main-promo__str-right-item">
-            <article class="l-grid__flex l-grid__content">
+          {% endfor %}
 
-              {{ card(cardData[1]) }}
-
-            </article>
-          </div>
-          <div class="l-grid__flex l-grid__element c-main-promo__str-right-item">
-            <article class="l-grid__flex l-grid__content">
-
-              {{ card(cardData[2]) }}
-
-            </article>
-          </div>
         </section>
       </div>
     </div>
