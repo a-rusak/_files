@@ -37,18 +37,13 @@
     display: flex;
     max-width: 100%;
 
-    //&--1of3 {
-      //flex-basis: percentage(1/3);
-      //width: percentage(1/3);
-      flex-basis: @size-em * 20;
-    //}
-
     &--border {
       & + & {
         border-left: 1px solid fade(@brand-primary-regular, 20%);
       }
       .mix(@i, @j, @k) {
-        //width: percentage(1/@i);
+        width: percentage(1/@i);
+        
         &:nth-child(@{j}) {
           border-left-color: transparent;
         }
