@@ -12,13 +12,13 @@
 
 1. `/ES2015` - Modern JavaScript.
     * [`index.js`](/ES2015/index.js);
-    * [`a11y.js`](/ES2015/a11y.js) - toggle accessibility mode: toggle contrast scheme, control text size, turn on/off photos;
+    * [`a11y.js`](/ES2015/a11y.js) - toggle contrast scheme, control text size, turn on/off photos;
     * [`calculator.js`](/ES2015/calculator.js) - simple form for calculate points;
     * [`lightbox.js`](/ES2015/lightbox.js) - photogallery with lazy load.
 
 1. `/templates`
     * [`Nunjucks`](/templates/Nunjucks) - templates used for build `HTML`;
-    * [`React`](/templates/React) - use Stateless Functional Components<sup>[2]</sup> as templates to build `HTML` with Static Site Generator Webpack Plugin[3].
+    * [`React`](/templates/React) - use Stateless Functional Components<sup>[2]</sup> as templates to build `HTML` with Static Site Generator Webpack Plugin<sup>[3]</sup>.
 
 1. [`/React`](/React) - SPA prototype, API mocked with `Express` app.
 

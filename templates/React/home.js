@@ -1,5 +1,4 @@
 import React from 'react'
-import BEMHelper from 'react-bem-helper'
 import Slider from './../admission/slider'
 import News from './news'
 import Catalog from './../admission/catalog'
