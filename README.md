@@ -1,9 +1,9 @@
 # Файлы с примерами кода из разных проектов
 1. `/build` - автоматизация сборки статики.
-    * [`Gruntfile.js`](/build/Gruntfile.js) - nunjucks, svgstore;
-    * [`gulpfile.js`](/build/gulpfile.js) - AngularJS SPA, environments, templatecache, cachbusting;
+    * [`Gruntfile.js`](/build/Gruntfile.js) - Nunjucks, Svgstore;
+    * [`gulpfile.js`](/build/gulpfile.js) - AngularJS, Gulp: Environment builds, Cache Buster, Template cache, Bower;
     * [`webpack1.config.js`](/build/webpack1.config.js) - React SPA;
-    * [`webpack2.config.js`](/build/webpack2.config.js) - v.2, nunjucks, lazy load, chunkhash, svg-sprite.
+    * [`webpack2.config.js`](/build/webpack2.config.js) - v.2, Nunjucks, lazy load, Chunkhash, Svg-sprite.
 
 1. `/CSS` - BEM with namespaces<sup>[1]</sup>.
     * [`figure-list.less`](/CSS/figure-list.less);
